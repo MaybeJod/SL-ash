@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SL Ticket Calculator</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <!-- css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- js -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>SL-ash your ticket expenses</h1>
+        <section>
+            <h2>Confused about which public transport ticket is right for you? Find out how many trips you need to take for your ticket to be worth it!</h2>
+            <p>Not sure if you should buy a single ticket, a monthly pass, or commit to a longer-term option? You're not alone! Figuring out the best deal for your travel habits can be tricky. That's why we created this simple tool to help you calculate the most cost-effective option. Just input your ticket choices, and we'll show you exactly how many trips you need to take for each pass to save you money. Whether you're commuting daily or just a few times a week, this tool will help you make a smart decision for your wallet!</p>
+
+            <div class="input-container">
+                <label for="ticket-select">What ticket do you want to buy</label>
+                <select name="tickets" id="ticket-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="110">24h, 110kr</option>
+                    <option value="650">30-day, 650kr</option>
+                    <option value="1880">90-day, 1880kr</option>
+                    <option value="6830">Annual(1 year), 6830kr</option>
+                </select>
+            </div>
+            
+            <p class="user-chose"></p>
+
+        </section>
+
+        <section>
+            <div>
+                <p class="display"></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
