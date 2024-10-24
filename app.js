@@ -15,7 +15,7 @@ const daysPerThirtyDayTicket = 30;
 // Display elements
 let display = document.querySelector(".display");
 let longTermTicketCost = document.querySelector("#ticket-select");
-let userChose = document.querySelector(".user-chose");
+//let userChose = document.querySelector(".user-chose");
 
 // Utility function to calculate round trips per period
 const calculateRoundTrips = (ticketPrice, periodInDays) => {
@@ -28,7 +28,6 @@ const showSelect = () => {
     if (!longTermTicketCost.value) {
         return display.innerHTML = "Please choose an option";
     } else {
-        userChose.innerHTML = `You chose the ${longTermTicketCost.value}kr ticket`;
         calc();
     }
 };
@@ -51,7 +50,7 @@ const calc = () => {
                 - Single ticket price: ${ticketPrices.singleTicket}kr </br>
                 - 24-hour ticket price: ${ticketPrices.twentyFourHourTicket}kr </br>
                 Formula: 24-hour ticket / single ticket = ${ticketPrices.twentyFourHourTicket} / ${ticketPrices.singleTicket} </br>
-                Result: You need ${totalRoundTrips24H.toFixed(2)} trips in 24 hours for the 24-hour ticket to be worth it. 
+                Result: You need <strong>${totalRoundTrips24H.toFixed(2)}</strong> trips in 24 hours for the 24-hour ticket to be worth it. 
             `;
             break;
         case ticketPrices.thirtyDayTicket:
@@ -62,7 +61,7 @@ const calc = () => {
                 - Single round trip price: ${roundTripPrice}kr </br>
                 - 30-day ticket price: ${ticketPrices.thirtyDayTicket}kr </br>
                 Formula: 30-day ticket / round trip = ${ticketPrices.thirtyDayTicket} / ${roundTripPrice} </br>
-                Result: You need ${roundTripsPer30Days.toFixed(2)} trips per 30 days for the 30-day ticket to be worth it. 
+                Result: You need <strong>${roundTripsPer30Days.toFixed(2)}</strong> trips per 30 days for the 30-day ticket to be worth it. 
             `;
             break;
         case ticketPrices.ninetyDayTicket:
@@ -73,7 +72,7 @@ const calc = () => {
                 - Single round trip price: ${roundTripPrice}kr </br>
                 - 90-day ticket price: ${ticketPrices.ninetyDayTicket}kr </br>
                 Formula: 90-day ticket / round trip, adjusted for 30 days = (${ticketPrices.ninetyDayTicket} / ${roundTripPrice}) * (30 / 90) </br>
-                Result: You need ${roundTripsPer90Days.toFixed(2)} trips per 30 days for the 90-day ticket to be worth it. 
+                Result: You need <strong>${roundTripsPer90Days.toFixed(2)}</strong> trips per 30 days for the 90-day ticket to be worth it. 
             `;
             break;
         case ticketPrices.oneYearTicket:
@@ -84,7 +83,7 @@ const calc = () => {
                 - Single round trip price: ${roundTripPrice}kr </br>
                 - 1-year ticket price: ${ticketPrices.oneYearTicket}kr </br>
                 Formula: 1-year ticket / round trip, adjusted for 30 days = (${ticketPrices.oneYearTicket} / ${roundTripPrice}) * (30 / 365) </br>
-                Result: You need ${roundTripsPerYear.toFixed(2)} trips per 30 days for the 1-year ticket to be worth it.
+                Result: You need <strong>${roundTripsPerYear.toFixed(2)}</strong> trips per 30 days for the 1-year ticket to be worth it.
             `;
             break;
         default:
@@ -102,5 +101,7 @@ function listen() {
         document.querySelector("#calculate-btn").addEventListener("click", calc);
     });
 }
+
+
 
 listen();

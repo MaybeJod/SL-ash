@@ -1,3 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
 :root {
-    --main-blue: ;
+    --sl-blue: #2870f0;
+    --sl-white: #f1f2f3;
+    --text-color: #000000;
+    --sl-card-main-green: #176e47;
+    --sl-card-secondary-green: #29855d;
 }
+
+body {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--sl-blue);
+    color: var(--sl-white);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    svg {
+        width: 10%;
+        height: auto;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vw;
+    margin: 0 auto;
+
+    h2 {
+        padding: 1rem 0rem 1rem 0rem;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1.3;
+        line-height: 1.5rem;
+        padding: 1rem 0rem 1rem 0rem;
+    }
+}
+
+.calculation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60vw;
+    margin: 0 auto;
+    position: relative;
+
+    .display {
+        font-size: 1.5rem;
+        position: absolute;
+        max-width: 20rem;
+        padding: 2rem 1rem 1rem 1rem;
+        color: var(--sl-white);
+        line-height: 2rem;
+    }
+
+    svg {
+        position: absolute;
+        bottom: 1px;
+        padding: 1rem;
+    }
+
+    .green-card {
+    max-width: 20rem;
+    height: 32rem;
+    background-color: var(--sl-card-main-green);
+
+    border-radius: 12px;
+    word-break: break-all;
+    overflow: hidden;
+
+        p {
+        font-size: 0.6rem;
+        color: var(--sl-card-secondary-green);
+        text-align: center;
+        }
+    }
+}
+
+.input-container {
+    max-width: 100vw;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+
+    
+
+    
+}
+
+#ticket-select {
+        font-family: "Didact Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: var(--sl-blue);
+        padding: 0.5rem;
+        border-radius: 12px;
+        color: var(--sl-white);
+        text-align: center;
+    }
